@@ -1,0 +1,231 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #9f9689;
+}
+
+.logo img {
+    width: 125px;
+}
+
+/* Default Navigation (visible on large screens) */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hide the hamburger by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    overflow: hidden;
+    text-align: center;       /* Center text in hero */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 78px;
+    margin-bottom: 20px;
+}
+
+/* Featured Section */
+.featured {
+    background-color: #322C2B;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.card {
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.card img {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 50px;
+    text-align: center;
+    background-color: #9f9689;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    border-radius: 25px;
+    width: 100px;
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* Hide the default nav items */
+    nav ul {
+        display: none;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Expanded nav when the hamburger is clicked */
+    nav ul.expanded {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero img {
+        width: 400px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero img {
+        width: 300px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form form {
+        max-width: 100%;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        width: 90%;
+    }
+
+    .contact-form button {
+        width: 80px;
+    }
+}

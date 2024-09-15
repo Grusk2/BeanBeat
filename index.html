@@ -8,13 +8,25 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('nav ul');
+            navList.classList.toggle('collapsed');
+            navList.classList.toggle('expanded');
+        }
+    </script>
+
     <header>
         <div class="logo">
-            <img src="./img/BeanBeat Logo.png" alt="BeanBeat Logo"> <!-- Replace with your actual logo file -->
+            <img src="./img/BeanBeat Logo.png" alt="BeanBeat Logo">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         <nav>
-            <ul>
+            <ul class="collapsed">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About</a></li>
@@ -23,18 +35,17 @@
             </ul>
         </nav>
     </header>
-
+    
     <section id="home" class="hero">
         <video autoplay muted loop class="hero-video">
             <source src="./img/126805-737028146_tiny.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Classic Coffee,Timeless Tunes.</h1>
+            <h1>Classic Coffee, Timeless Tunes.</h1>
         </div>
     </section>
 
-    <!-- Featured Section -->
     <section class="featured">
         <div class="card">
             <img src="./img/Bean BEat roast 1.png" alt="Bean Roast 1">
