@@ -24,21 +24,51 @@ header {
     width: 125px;
 }
 
-/* Default Navigation (visible on large screens) */
-nav ul {
-    list-style: none;
+/* Navigation */
+nav {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    background-color: #9f9689;
+    position: relative;
+    z-index: 10;
+}
+
+/* By default, hide the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%; /* Drop the menu below the header */
+    width: 100%;
+    background-color: #9f9689;
+    text-align: center;
 }
 
 nav ul li {
-    font-size: 20px;
-    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul.collapsed {
+    display: none; /* Hidden by default */
+}
+
+nav ul.expanded {
+    display: block; /* Shown when toggled */
+}
+
+/* Hamburger Menu appears on small screens */
+@media (max-width: 768px) {
+    nav ul.expanded {
+        display: block;
+    }
 }
 
 /* Hide the hamburger by default */
@@ -161,6 +191,7 @@ nav ul li a {
     /* Show the hamburger icon */
     .hamburger {
         display: flex;
+        justify-content: space-around;
     }
 
     /* Expanded nav when the hamburger is clicked */
