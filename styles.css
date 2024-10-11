@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ body {
     background-color: #fff;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -24,7 +22,6 @@ header {
     width: 125px;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -33,13 +30,12 @@ nav {
     z-index: 10;
 }
 
-/* By default, hide the menu */
 nav ul {
     list-style-type: none;
     padding: 0;
     display: none;
     position: absolute;
-    top: 100%; /* Drop the menu below the header */
+    top: 100%;
     width: 100%;
     background-color: #9f9689;
     text-align: center;
@@ -57,21 +53,19 @@ nav ul li a {
 }
 
 nav ul.collapsed {
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 nav ul.expanded {
-    display: block; /* Shown when toggled */
+    display: block; 
 }
 
-/* Hamburger Menu appears on small screens */
 @media (max-width: 768px) {
     nav ul.expanded {
         display: block;
     }
 }
 
-/* Hide the hamburger by default */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -85,15 +79,14 @@ nav ul.expanded {
     margin: 5px 0;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     height: 60vh;
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    text-align: center;       /* Center text in hero */
+    text-align: center;
 }
 
 .hero-video {
@@ -117,7 +110,6 @@ nav ul.expanded {
     margin-bottom: 20px;
 }
 
-/* Featured Section */
 .featured {
     background-color: #322C2B;
     display: grid;
@@ -138,7 +130,6 @@ nav ul.expanded {
     height: auto;
 }
 
-/* Contact Form */
 .contact-form {
     padding: 50px;
     text-align: center;
@@ -176,25 +167,21 @@ nav ul.expanded {
     margin-top: 20px;
 }
 
-/* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
     header {
         padding-left: 50px;
         padding-right: 50px;
     }
 
-    /* Hide the default nav items */
     nav ul {
         display: none;
     }
 
-    /* Show the hamburger icon */
     .hamburger {
         display: flex;
         justify-content: space-around;
     }
 
-    /* Expanded nav when the hamburger is clicked */
     nav ul.expanded {
         display: flex;
         flex-direction: column;
